@@ -16,15 +16,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
         final ArrayList<String> places = new ArrayList<>();
 
-        places.add("Dodaj nowe miejsce....");
+        places.add("Dodaj nowe miejsce...");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,places);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, places);
 
         listView.setAdapter(arrayAdapter);
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 //int i = pozycja, long l = id
-                Toast.makeText(MainActivity.this, i, Toast.LENGTH_SHORT).show();
+
 
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 intent.putExtra("placeNumber", i);

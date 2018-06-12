@@ -41,7 +41,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         Intent intent = getIntent();
-        Toast.makeText(this, intent.getStringExtra("placeNumber"),Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this, intent.getStringExtra("placeNumber"), Toast.LENGTH_SHORT).show();
+
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
